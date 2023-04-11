@@ -1,0 +1,29 @@
+﻿<Window x:Class="Final_Project_UP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Final_Project_UP"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Background="AliceBlue"
+        Title="MainWindow" Height="250" Width="400">
+    <Grid Margin="5,5,5,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34*"></RowDefinition>
+            <RowDefinition Height="30*"></RowDefinition>
+            <RowDefinition Height="30*"></RowDefinition>
+            <RowDefinition Height="33*"></RowDefinition>
+            <RowDefinition Height="23*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.ColumnSpan="2" Text="Добро пожаловать!" TextAlignment="Center" FontSize="22" Foreground="Black"></TextBlock>
+        <TextBox x:Name="loginbox" Grid.ColumnSpan="2" Grid.Row="1" materialDesign:HintAssist.Hint="Логин" Margin="0,0,0,5" VerticalContentAlignment="Bottom" SelectionTextBrush="Transparent"/>
+        <PasswordBox x:Name="passwordbox" Grid.ColumnSpan="2" Grid.Row="2" materialDesign:HintAssist.Hint="Пароль" Margin="0,5,0,0" VerticalContentAlignment="Bottom" SelectionTextBrush="#03FFFFFF"/>
+        <Button x:Name="Enter" Content="Войти" Grid.Row="4" Margin="0,0,5,0" FontSize="12" Click="Enter_Click"/>
+        <Button x:Name="Enter_User" Content="Войти как пользователь" Grid.Row="4" Grid.Column="2" Margin="5,0,0,0" FontSize="12" Click="Enter_User_Click"></Button>
+    </Grid>
+</Window>
